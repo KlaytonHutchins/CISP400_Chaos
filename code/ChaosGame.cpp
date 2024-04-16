@@ -61,7 +61,7 @@ int main() {
 			//calculate midpoint between random vertex and the last point in the vector
 			//push back the newly generated coord.
 			int newX, newY;
-			for (int i = 0; i < 75; i++) {
+			for (int i = 0; i < 1; i++) {
         	        	int vertexIdx = rand() % 3;
         	        	newX = (vertices[vertexIdx].x + points.back().x) / 2;
         	        	newY = (vertices[vertexIdx].x + points.back().y) / 2;
