@@ -19,7 +19,7 @@ int main() {
 	vector<Vector2f> points;
 	Text text;
 	Font font;
-	font.loadFromFile("arial.ttf");
+	font.loadFromFile("Achemost.otf");
 	text.setFont(font);
 	text.setString("Click three points to create the vertices of a triangle\nThen click a fourth point inside the triangle to start creating the Sierpinski Triangle");
 	text.setCharacterSize(24);
