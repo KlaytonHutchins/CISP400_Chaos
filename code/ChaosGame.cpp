@@ -64,7 +64,7 @@ int main() {
 			for (int i = 0; i < 1; i++) {
         	        	int vertexIdx = rand() % 3;
         	        	newX = (vertices[vertexIdx].x + points.back().x) / 2;
-        	        	newY = (vertices[vertexIdx].x + points.back().y) / 2;
+        	        	newY = (vertices[vertexIdx].y + points.back().y) / 2;
         	        	points.push_back(Vector2f(newX, newY));
 			}
 		}
