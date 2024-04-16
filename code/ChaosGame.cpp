@@ -19,7 +19,7 @@ int main() {
 	vector<Vector2f> points;
 	Text text;
 	Font font;
-	font.loadFromFile("Achemost.otf");
+	font.loadFromFile("./fonts/Achemost.ttf");
 	text.setFont(font);
 	text.setString("Click three points to create the vertices of a triangle\nThen click a fourth point inside the triangle to start creating the Sierpinski Triangle");
 	text.setCharacterSize(24);
@@ -81,6 +81,7 @@ int main() {
 		*****************************************/
 
 		window.clear();
+		window.draw(text);
 		for(int i = 0; i < vertices.size(); i++) {
 			RectangleShape rect(Vector2f(10,10));
 			rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
