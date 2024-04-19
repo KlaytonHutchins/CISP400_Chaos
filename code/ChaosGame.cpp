@@ -22,7 +22,7 @@ int main() {
 	font.loadFromFile("./fonts/opensans.ttf");
 	text.setFont(font);
 	text.setString("Click three points to create the vertices of a triangle\nThen click a fourth point inside the triangle to start creating the Sierpinski Triangle");
-	text.setCharacterSize(24);
+	text.setCharacterSize(16);
 	text.setFillColor(Color::White);
 
 	while (window.isOpen()) {
@@ -39,15 +39,15 @@ int main() {
 			}
 			if (event.type == sf::Event::MouseButtonPressed) {
 				if (event.mouseButton.button == sf::Mouse::Left) {
-					std::cout << "the left button was pressed" << std::endl;
-					std::cout << "mouse x: " << event.mouseButton.x << std::endl;
-					std::cout << "mouse y: " << event.mouseButton.y << std::endl;
+					//std::cout << "the left button was pressed" << std::endl;
+					//std::cout << "mouse x: " << event.mouseButton.x << std::endl;
+					//std::cout << "mouse y: " << event.mouseButton.y << std::endl;
 
 					if(vertices.size() < 3) {
 						vertices.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
 					} else if(points.size() == 0) {
-						///fourth click
-						///push back to points vector
+						//fourth click
+						//push back to points vector
 						points.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
 					}
 				}
@@ -83,13 +83,13 @@ int main() {
 		window.clear();
 		window.draw(text);
 		for(int i = 0; i < vertices.size(); i++) {
-			RectangleShape rect(Vector2f(10,10));
+			RectangleShape rect(Vector2f(8,8));
 			rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
 			rect.setFillColor(Color::Blue);
 			window.draw(rect);
 		}
 		for (int i = 0; i < points.size(); i++) {
-			RectangleShape rect(Vector2f(10,10));
+			RectangleShape rect(Vector2f(8,8));
 			rect.setPosition(Vector2f(points[i].x, points[i].y));
 			rect.setFillColor(Color::Blue);
 			window.draw(rect);
